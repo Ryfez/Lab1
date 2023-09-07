@@ -3,13 +3,15 @@
 
 int main(int argc, char **argv)
 {
-	char name[255];
+	char first[255], last[255];
 
-	printf("Enter your name: ");
-	fgest(name, 255, stdin);
-	printf("length = %d\n", strlen(name)); /* debug line */
-	name[strlen(name)-1] = '\0'; /* remove the newline atthe end */
+	printf("Enter your first name: ");
+	fgest(first, 255, stdin);
+	first[strlen(first)-1] = '\0';/* remove the newline atthe end */
 
-	printf("Hellо s!\n", name);
+	prinf("Now enter your last name: ");
+	gets(last);/* buffer overflow? whats that? */
+
+	printf("Hellо %s %s!\n", first, last);
 	return 0;
 }
