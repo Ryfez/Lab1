@@ -4,7 +4,7 @@
 
 int main(int argc, char **argv)
 {
-	char first[200], last[200];
+	char first[255], last[255];
 
 	askname(first, stdin);
 
