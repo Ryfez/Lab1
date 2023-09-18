@@ -4,7 +4,7 @@
 
 int main(int argc, char **argv)
 {
-	char first[255], last[255];
+	char first[200], last[200];
 
 	askname(first, stdin);
 
@@ -18,6 +18,8 @@ int main(int argc, char **argv)
 
 	printf("Enter your name: ");
 	fgest(name, 255, stdin);
+	printf("length = %d\n", strlen(name));
+	name[strlen(name)-1] = '\0';
 
 	printf("Hellо s!\n", name);
 >>>>>>> lastname
